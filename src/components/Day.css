@@ -1,0 +1,15 @@
+#day{
+    border: solid 1px red;
+    color:antiquewhite;
+    margin-top: 20px;
+    width: 18vw;
+}
+
+h3{
+    border-bottom: solid 1px antiquewhite;
+    text-align: center;
+}
+
+.meal{
+    margin: 10px;
+}
