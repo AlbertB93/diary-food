@@ -4,7 +4,7 @@ import "./Menu.css";
 const Menu = (props) => {
   return (
     <div id="menu">
-      <span>Menu</span>
+      <h2>Menu</h2>
       <ul>
         <li>Śniadania</li>
         <li>Obiady</li>
