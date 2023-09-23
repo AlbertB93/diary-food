@@ -22,10 +22,10 @@ const Day = (props) => {
       </div>
       <h3>Podsumowanie: </h3>
       <ul>
-        <li>Kcal: </li>
-        <li>Węglowodany: </li>
-        <li>Białko: </li>
-        <li>Tłuszcze: </li>
+        <li>Wartość energetyczna: {props.summaryDay.kcal} kcal. </li>
+        <li>Węglowodany: {props.summaryDay.carbons} g.</li>
+        <li>Białko: {props.summaryDay.proteins} g.</li>
+        <li>Tłuszcze: {props.summaryDay.fats} g. </li>
       </ul>
     </div>
   );

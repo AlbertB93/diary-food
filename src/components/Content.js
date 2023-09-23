@@ -2,38 +2,42 @@ import React from "react";
 import "./Content.css";
 
 
+
 const Content = (props) => {
+
+ const dishHandler = (i) => props.calculateDay(props.dishes[i].id) ;
+
   return <div id="content--container">
     <div id="dishes">
       <div className="single--dish">
         <div className="single--dish__image">
           <img src={require('../images/dish1.PNG')} alt="dish1" className="image--file" />
         </div>
-        <h3>szakszuka</h3>
+        <h3>{props.dishes[0].title}</h3>
         <div className="single--dish__values">
           <ul>
-            <li> Wartość energetyczna: 510 kcal.</li>
-            <li>Tłuszcze: 12 g. </li>
-            <li>Węglowodany: 50 g.</li>
-            <li>Białko: 34 g.</li>
+            <li>Wartość energetyczna: {props.dishes[0].kcal} kcal.</li>
+            <li>Tłuszcze: {props.dishes[0].fats} g. </li>
+            <li>Węglowodany: {props.dishes[0].carbons} g.</li>
+            <li>Białko: {props.dishes[0].proteins} g.</li>
           </ul>
         </div>
         <div className="single--dish__buttons">
           <button className="showRecipe_btn">Pokaż przepis</button>
-          <button className="showRecipe_btn">Dodaj do jadłospisu</button>
+          <button className="showRecipe_btn" onClick={dishHandler(0)}>Dodaj do jadłospisu</button>
         </div>
       </div>
       <div className="single--dish">
         <div className="single--dish__image">
           <img src={require('../images/dish2.PNG')} alt="dish1" className="image--file" />
         </div>
-        <h3>Spaghetti</h3>
+        <h3>{props.dishes[1].title}</h3>
         <div className="single--dish__values">
           <ul>
-            <li> Wartość energetyczna: 630 kcal.</li>
-            <li>Tłuszcze: 34 g. </li>
-            <li>Węglowodany: 80 g.</li>
-            <li>Białko: 28 g.</li>
+            <li>Wartość energetyczna: {props.dishes[1].kcal} kcal.</li>
+            <li>Tłuszcze: {props.dishes[1].fats} g. </li>
+            <li>Węglowodany: {props.dishes[1].carbons} g.</li>
+            <li>Białko: {props.dishes[1].proteins} g.</li>
           </ul>
         </div>
         <div className="single--dish__buttons">
@@ -45,13 +49,13 @@ const Content = (props) => {
         <div className="single--dish__image">
           <img src={require('../images/dish3.PNG')} alt="dish1" className="image--file" />
         </div>
-        <h3>Tortilla z kurczakiem</h3>
+        <h3>{props.dishes[2].title}</h3>
         <div className="single--dish__values">
           <ul>
-            <li> Wartość energetyczna: 310 kcal.</li>
-            <li>Tłuszcze: 8 g. </li>
-            <li>Węglowodany: 45 g.</li>
-            <li>Białko: 19 g.</li>
+            <li>Wartość energetyczna: {props.dishes[2].kcal} kcal.</li>
+            <li>Tłuszcze: {props.dishes[2].fats} g. </li>
+            <li>Węglowodany: {props.dishes[2].carbons} g.</li>
+            <li>Białko: {props.dishes[2].proteins} g.</li>
           </ul>
         </div>
         <div className="single--dish__buttons">

@@ -1,7 +1,5 @@
 import "./App.css";
-import Menu from "./components/Menu";
-import Content from "./components/Content";
-import Day from "./components/Day";
+import Engine from "./components/Engine";
 
 function App() {
 
@@ -10,9 +8,9 @@ function App() {
       <div className="app--title">      
       <h1>Skomponuj swój dzień jedzenia !</h1>
       </div>
-      <Menu />
-      <Content />
-      <Day />
+
+      <Engine />
+
     </div>
   );
 }
