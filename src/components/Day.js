@@ -12,9 +12,11 @@ const Day = (props) => {
   const [summaryDay, setSummaryDay] = useState(sumDay);
 
   const handleCalculate = () => {
-    summaryDay.kcal = summaryDay.kcal + 100;
-    setSummaryDay(summaryDay);
-    console.log("dziala");
+    const newSummaryDay = summaryDay;
+    newSummaryDay.kcal += valuesDishes[0].kcal;
+    console.log(newSummaryDay);
+    console.log(sumDay);
+    setSummaryDay(newSummaryDay);
   };
 
   let valuesDishes = [
@@ -47,7 +49,7 @@ const Day = (props) => {
       <h3>Podsumowanie: </h3>
       {
         <ul>
-          <li>Wartość energetyczna: {sumDay.kcal} kcal. </li>
+          <li>Wartość energetyczna: {summaryDay.kcal} kcal. </li>
           <li>Węglowodany: {summaryDay.carbons} g.</li>
           <li>Białko: {summaryDay.proteins} g.</li>
           <li>Tłuszcze: {summaryDay.fats} g. </li>
