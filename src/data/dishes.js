@@ -1,4 +1,4 @@
-const dishes = [
+export const dishes = [
   {
     id: 1,
     title: "Szakszuka",
@@ -23,4 +23,5 @@ const dishes = [
     carbons: 36,
     proteins: 20,
   },
+  
 ];

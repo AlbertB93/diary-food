@@ -1,13 +1,10 @@
-#content--container {
-    /*     border: solid 1px blue; */
-    color: white;
-    width: 60vw;
-}
 
 #dishes {
     /*     border: solid 1px red; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    width: 66vw;
 }
 
 .single--dish {
@@ -18,7 +15,7 @@
     flex-direction: column;
     margin: 10px;
     padding: 10px;
-    width: 30%;
+    width: 26%;
 }
 
 .single--dish__image {
