@@ -3,6 +3,8 @@ import "./Content.css";
 import { dishes } from "../data/dishes.js";
 import Day from "./Day";
 
+
+
 class Content extends React.Component {
   /*  const dishHandler = (i) => props.calculateDay(props.dishes[i].id); */
 
@@ -17,10 +19,16 @@ class Content extends React.Component {
   addMeal = (index) => {
     console.log("Posiłek: " + dishes[index].title);
     this.setState({ title: dishes[index].title });
+    this.setState({ kcal: dishes[index].kcal });
+    this.setState({ fats: dishes[index].fats });
+    this.setState({ carbons: dishes[index].carbons });
+    this.setState({ proteins: dishes[index].proteins });
   };
+
 
   render() {
     return (
+      <div id="content--container">
       <div id="dishes">
         {dishes?.map((dish, index) => {
           return (
@@ -42,7 +50,7 @@ class Content extends React.Component {
                 </ul>
               </div>
               <div className="single--dish__buttons">
-                <button className="showRecipe_btn">Pokaż przepis</button>
+                <button className="showRecipe_btn" onClick={this.addToDay}>Pokaż przepis</button>
                 <button
                   className="showRecipe_btn"
                   onClick={() => this.addMeal(index)}
@@ -53,8 +61,10 @@ class Content extends React.Component {
             </div>
           );
         })}
-        <Day title={this.state.title} />
-        <h2>Aktualnie wybrany posiłek: </h2>
+        </div>
+        <Day posilek={this.state} funkcja={this.addMeal} />
+        <div id="testowy">
+                  <h2>Aktualnie wybrany posiłek: </h2>
         <div>
           <p className="test"> Nazwa: {this.state.title}</p>
           <p className="test"> Kcal: {this.state.kcal}</p>
@@ -62,6 +72,8 @@ class Content extends React.Component {
           <p className="test">W: {this.state.carbons}</p>
           <p className="test">B: {this.state.proteins}</p>
         </div>
+        </div>
+
       </div>
     );
   }
