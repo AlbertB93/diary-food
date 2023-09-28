@@ -16,6 +16,7 @@ const Recipe = (props) => {
           />
         </div>
         <div className="ingredients">
+          <h3>Składniki:</h3>
           <ul>
             <li>Składnik 1 z innego pliku</li>
             <li>Składnik 1 z innego pliku</li>

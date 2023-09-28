@@ -57,8 +57,20 @@
 }
 
 .recipe--container__imageAndIgredients .ingredients {
-  align-self: flex-start;
+  /*   align-content: space-around; */
+  align-items: center;
+  border: solid 1px red;
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe--container__imageAndIgredients .ingredients h3 {
+  /*             text-align: center; */
+}
+
+.recipe--container__imageAndIgredients .ingredients ul {
+  /*    border: solid 1px yellow; */
 }
 
 .recipe--container__description {
