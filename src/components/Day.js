@@ -46,6 +46,14 @@ const Day = (props) => {
         )
       })}
 
+      <div className="meal">
+        <p>2.</p> {props.posilek.title}: 
+        kcal: {props.posilek.kcal}, 
+        tłuszcze:{props.posilek.fats}, 
+        węgle: {props.posilek.carbons}, 
+        białko: {props.posilek.proteins},
+      </div>
+
       <h3>Podsumowanie: </h3>
       {
         <ul>

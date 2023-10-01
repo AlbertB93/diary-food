@@ -77,7 +77,7 @@ class Content extends React.Component {
             );
           })}
         </div>
-        <Day posilek={this.state} funkcja={this.addMeal} />
+        <Day posilek={this.state} funkcja={() => this.addMeal()} />
         <Recipe posilek={this.state} />
       </div>
     );
