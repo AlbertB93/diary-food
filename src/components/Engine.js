@@ -1,7 +1,7 @@
 import React from "react";
 import Content from "./Content";
 import Menu from "./Menu";
-import "../App.css";
+import "./../scss/App.css";
 
 class Engine extends React.Component {
   render() {

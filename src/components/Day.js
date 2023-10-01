@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Day.css";
+import "../scss/Day.css";
 import { mealsDay } from "../data/mealsDay";
 
 const Day = (props) => {

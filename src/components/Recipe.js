@@ -1,13 +1,24 @@
-import "./Recipe.scss";
+import "../scss/Recipe.scss";
 
 const Recipe = (props) => {
+
+  const closeRecipe = () => {
+    let element = document.getElementById('recipe--container');
+    let recipeValues = document.getElementsByClassName('single--dish__values');
+    let singleDish = document.getElementsByClassName('single--dish');
+
+    element.style.display = "none";
+    for (let i = 0; i < recipeValues.length; i++) {
+      recipeValues[i].style.display = "flex"
+      singleDish[i].style.opacity = 1;
+    }
+
+  }
+
+
   return (
     <div id="recipe--container">
       <div className="recipe--container__title">
-        <h2>{props.posilek.title}</h2>
-        <button className="btn__close">Zamknij </button>
-      </div>
-      <div className="recipe--container__imageAndIgredients">
         <div className="image">
           <img
             src={require("../images/dish1.PNG")}
@@ -15,6 +26,28 @@ const Recipe = (props) => {
             className="image--file"
           />
         </div>
+        <div className="first--row">
+          <h1>{props.posilek.title}</h1>
+          <div className="second--row">
+            <p className="values">
+              wartość energetyczna:  {props.posilek.kcal} kcal.
+            </p>
+            <p className="values">
+              tłuszcze:  {props.posilek.fats} g.
+            </p>
+            <p className="values">
+              węglowodany:  {props.posilek.carbons} g.
+            </p>
+            <p className="values">
+              białka:  {props.posilek.proteins} g.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <button className="btn__close" onClick={() => closeRecipe()}>Zamknij </button>
+      <div className="recipe--container__imageAndIgredients">
+
         <div className="ingredients">
           <h3>Składniki:</h3>
           <ul>
@@ -27,7 +60,7 @@ const Recipe = (props) => {
             <li>Składnik 1 z innego pliku</li>
             <li>Składnik 1 z innego pliku</li>
           </ul>
-        </div>
+        </div> 
       </div>
       <div className="recipe--container__description">
         <p>Tekst pobrany</p>

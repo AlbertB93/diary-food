@@ -1,4 +1,4 @@
-import "./scss/App.css";
+import "./App.css";
 import Engine from "./components/Engine";
 
 function App() {

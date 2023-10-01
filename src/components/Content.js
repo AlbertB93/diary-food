@@ -1,5 +1,5 @@
 import React from "react";
-import "./Content.css";
+import "../scss/Content.css";
 import { dishes } from "../data/dishes.js";
 import Day from "./Day";
 import Recipe from "./Recipe";
@@ -25,9 +25,23 @@ class Content extends React.Component {
     this.setState({ proteins: dishes[index].proteins });
   };
 
+  showRecipe = (index) =>{
+    let recipeContainer = document.getElementById('recipe--container');
+    let recipeValues = document.getElementsByClassName('single--dish__values');
+    let singleDish = document.getElementsByClassName('single--dish');
+    this.addMeal(index);
+    recipeContainer.style.display = "flex";
+    for (let i = 0; i < recipeValues.length; i++){
+      recipeValues[i].style.display = "none"
+      singleDish[i].style.opacity = 0.5;
+    }
+    singleDish[index].style.opacity=1;
+  }
+
   render() {
     return (
       <div id="content--container">
+  
         <div id="dishes">
           {dishes?.map((dish, index) => {
             return (
@@ -41,7 +55,7 @@ class Content extends React.Component {
                 </div>
                 <h3>{dish.title}</h3>
                 <div className="single--dish__values">
-                  <ul>
+                  <ul className="list--values">
                     <li>Wartość energetyczna: {dish.kcal} kcal.</li>
                     <li>Tłuszcze: {dish.fats} g. </li>
                     <li>Węglowodany: {dish.carbons} g.</li>
@@ -49,7 +63,7 @@ class Content extends React.Component {
                   </ul>
                 </div>
                 <div className="single--dish__buttons">
-                  <button className="showRecipe_btn" onClick={this.addToDay}>
+                  <button className="showRecipe_btn" onClick={() => this.showRecipe(index)}>
                     Pokaż przepis
                   </button>
                   <button
@@ -64,16 +78,6 @@ class Content extends React.Component {
           })}
         </div>
         <Day posilek={this.state} funkcja={this.addMeal} />
-        {/*         <div id="testowy">
-          <h2>Aktualnie wybrany posiłek: </h2>
-          <div>
-            <p className="test"> Nazwa: {this.state.title}</p>
-            <p className="test"> Kcal: {this.state.kcal}</p>
-            <p className="test">F: {this.state.fats}</p>
-            <p className="test">W: {this.state.carbons}</p>
-            <p className="test">B: {this.state.proteins}</p>
-          </div>
-        </div> */}
         <Recipe posilek={this.state} />
       </div>
     );
