@@ -13,12 +13,24 @@ class Content extends React.Component {
     proteins: 0,
   };
 
+
   addMeal = (index) => {
     this.setState({ title: dishes[index].title });
     this.setState({ kcal: dishes[index].kcal });
     this.setState({ fats: dishes[index].fats });
     this.setState({ carbons: dishes[index].carbons });
     this.setState({ proteins: dishes[index].proteins });
+
+    let nowyDiv = document.createElement('div');
+    nowyDiv.innerHTML = this.state.title
+    document.getElementById("test").appendChild(nowyDiv);
+
+/* 
+    const node = document.createElement("li");
+    const textnode = document.createTextNode("Water");
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+ */
   };
 
   showRecipe = (index) => {
@@ -36,6 +48,8 @@ class Content extends React.Component {
     }
     singleDish[index].style.opacity = 1;
   };
+
+
 
   render() {
     return (

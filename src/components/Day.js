@@ -5,6 +5,13 @@ import "../scss/Day.css";
 const Day = (props) => {
   return (
     <div id="day">
+      <div className="single--dish__image">
+        <img
+          src={require("../images/felek.png")}
+          alt="dish1"
+          className="image--file"
+        />
+      </div>
       <h3>Aktualny jadłospis: </h3>
       {/*       {meals.map((meal, index) => {
         return (
@@ -16,10 +23,13 @@ const Day = (props) => {
       })} */}
 
       <div className="meal">
-        <p>2.</p> {props.selectedMeal.title}: kcal: {props.selectedMeal.kcal},
+        <div className="meal--title"> {props.selectedMeal.title}</div>
+        kcal: {props.selectedMeal.kcal},
         tłuszcze:{props.selectedMeal.fats}, węgle: {props.selectedMeal.carbons},
-        białko: {props.selectedMeal.proteins},
+        białko: {props.selectedMeal.proteins};
       </div>
+      
+      <div id="test"> test w Dayjs</div>
 
       <h3>Podsumowanie: </h3>
       {
