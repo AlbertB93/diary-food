@@ -1,1 +1,1 @@
-#menu{color:gold;margin-top:40px;width:14vw}h2{border-bottom:solid 1px whitesmoke;color:gold;padding-bottom:10px;text-align:center}ul{margin-top:50px}
+#menu{display:flex;color:gold;flex-direction:column;width:14vw}#menu h2{border-bottom:solid 1px whitesmoke;color:gold;margin-top:50px;padding-bottom:10px;text-align:center}#menu ul{margin-top:50px}#menu .single--dish__image{align-items:center;align-self:center;display:flex;height:150px;justify-content:center;margin-top:-70px;width:150px}#menu .single--dish__image .image--file{border:none;height:90%;width:auto}

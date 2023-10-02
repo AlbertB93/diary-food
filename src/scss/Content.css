@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 84vw;
 }
 
@@ -51,7 +51,7 @@ h3 {
   width: 150px;
 }
 
-.image--file {
+.single--dish__image .image--file {
   border: solid 3px black;
   height: 90%;
   width: auto;
@@ -64,6 +64,7 @@ h3 {
 
 .single--dish__values {
   color: whitesmoke;
+  font-size: 0.8rem;
 }
 
 .single--dish__values .list--values {
@@ -75,14 +76,12 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
-.showRecipe_btn {
+.single--dish__buttons .showRecipe_btn {
+  background-color: #212121;
+  color: gold;
   margin-top: 10px;
   width: auto;
-}
-
-.test {
-  color: yellow;
 }
