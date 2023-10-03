@@ -24,11 +24,11 @@ const Day = (props) => {
 
       <div className="meal">
         <div className="meal--title"> {props.selectedMeal.title}</div>
-        kcal: {props.selectedMeal.kcal},
-        tłuszcze:{props.selectedMeal.fats}, węgle: {props.selectedMeal.carbons},
-        białko: {props.selectedMeal.proteins};
+        kcal: {props.selectedMeal.kcal}, tłuszcze:{props.selectedMeal.fats},
+        węgle: {props.selectedMeal.carbons}, białko:{" "}
+        {props.selectedMeal.proteins};
       </div>
-      
+
       <div id="test"> test w Dayjs</div>
 
       <h3>Podsumowanie: </h3>

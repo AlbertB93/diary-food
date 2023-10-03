@@ -3,7 +3,10 @@
 }
 
 body {
-  background-color: #1a1a1a;
+  /*   background-color: rgb(0, 0, 0); */
+  /*   background: linear-gradient(#9198e5, #171616, #9198e5); */
+  background: linear-gradient(#080808, #8785a0, #00010b);
+  min-height: 100vh;
 }
 
 .App {

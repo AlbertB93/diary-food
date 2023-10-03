@@ -5,27 +5,38 @@ import Day from "./Day";
 import Recipe from "./Recipe";
 
 class Content extends React.Component {
-  state = {
-    title: "Szakszuka - ręcznie",
-    kcal: 0,
-    fats: 0,
-    carbons: 0,
-    proteins: 0,
-  };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "Szakszuka - ręcznie",
+      kcal: 0,
+      fats: 0,
+      carbons: 0,
+      proteins: 0,
+    };
+  }
 
   addMeal = (index) => {
-    this.setState({ title: dishes[index].title });
+    /*
+    this.setState((state) =>{ 
+       {state: dishes[index].title }
+    ); */
+
+    /*     this.setState((state) => {
+      {
+        state.title = dishes[index].title;
+      }
+    }); */
+
+    this.setState((state) => (state.title = dishes[index].title));
+
+    console.log("Aktualny tytuł: " + this.state.title);
+
     this.setState({ kcal: dishes[index].kcal });
     this.setState({ fats: dishes[index].fats });
     this.setState({ carbons: dishes[index].carbons });
     this.setState({ proteins: dishes[index].proteins });
-
-    let nowyDiv = document.createElement('div');
-    nowyDiv.innerHTML = this.state.title
-    document.getElementById("test").appendChild(nowyDiv);
-
-/* 
+    /* 
     const node = document.createElement("li");
     const textnode = document.createTextNode("Water");
     node.appendChild(textnode);
@@ -33,12 +44,25 @@ class Content extends React.Component {
  */
   };
 
+  addToDayMenu = (index) => {
+    this.addMeal(index);
+    console.log("Aktualny tytuł: " + this.state.title);
+    let nowyDiv = document.createElement("div");
+    nowyDiv.classList.add("meal");
+    let nowyDiv2 = document.createElement("div");
+    nowyDiv2.classList.add("meal--title");
+    nowyDiv2.innerHTML = this.state.title;
+
+    nowyDiv.appendChild(nowyDiv2);
+
+    document.getElementById("test").appendChild(nowyDiv);
+  };
+
   showRecipe = (index) => {
     let recipeContainer = document.getElementById("recipe--container");
     let recipeValues = document.getElementsByClassName("single--dish__values");
     let singleDish = document.getElementsByClassName("single--dish");
     let dishes = document.getElementById("dishes");
-    let element = document.getElementById("recipe--container");
     this.addMeal(index);
     recipeContainer.style.display = "flex";
     for (let i = 0; i < recipeValues.length; i++) {
@@ -48,8 +72,6 @@ class Content extends React.Component {
     }
     singleDish[index].style.opacity = 1;
   };
-
-
 
   render() {
     return (
@@ -83,7 +105,7 @@ class Content extends React.Component {
                   </button>
                   <button
                     className="showRecipe_btn"
-                    onClick={() => this.addMeal(index)}
+                    onClick={() => this.addToDayMenu(index)}
                   >
                     Dodaj do jadłospisu
                   </button>
@@ -93,6 +115,7 @@ class Content extends React.Component {
           })}
           <Recipe selectedMeal={this.state} />
         </div>
+
         <Day selectedMeal={this.state} />
       </div>
     );
