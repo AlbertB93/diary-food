@@ -46,7 +46,7 @@ class Content extends React.Component {
 
   addToDayMenu = (index) => {
     this.addMeal(index);
-    console.log("Aktualny tytuł: " + this.state.title);
+    console.log("Aktualny tytuł: " + this.state.title.value);
     let nowyDiv = document.createElement("div");
     nowyDiv.classList.add("meal");
     let nowyDiv2 = document.createElement("div");
@@ -98,13 +98,13 @@ class Content extends React.Component {
                 </div>
                 <div className="single--dish__buttons">
                   <button
-                    className="showRecipe_btn"
+                    className="simple_btn"
                     onClick={() => this.showRecipe(index)}
                   >
                     Pokaż przepis
                   </button>
                   <button
-                    className="showRecipe_btn"
+                    className="simple_btn"
                     onClick={() => this.addToDayMenu(index)}
                   >
                     Dodaj do jadłospisu
@@ -115,7 +115,6 @@ class Content extends React.Component {
           })}
           <Recipe selectedMeal={this.state} />
         </div>
-
         <Day selectedMeal={this.state} />
       </div>
     );

@@ -1,5 +1,7 @@
 #day {
-
+    border: solid 3px rgb(28, 28, 28);
+    border-radius: 12px;
+    box-shadow: 4px 6px black;
     color: antiquewhite;
     display: flex;
     flex-direction: column;
@@ -9,6 +11,7 @@
 
     .single--dish__image {
         /*         border: solid 1px red; */
+        background-color: rgb(58, 58, 58);
         border: solid 5px white;
         border-radius: 90px;
         align-items: center;
@@ -37,9 +40,17 @@
     .meal {
         margin: 10px;
 
-        &--title{
+        &--title {
             font-size: 1.2rem;
             text-align: center;
         }
+    }
+
+    .simple_btn {
+
+        background-color: rgb(33, 33, 33);
+        color: gold;
+        margin: 10px auto;
+        width: 160px;
     }
 }

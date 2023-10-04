@@ -40,7 +40,7 @@ const Day = (props) => {
           <li>Białka: 0 kcal. </li>
         </ul>
       }
-      <button>Oblicz</button>
+      <button className="simple_btn">Oblicz</button>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 #menu {
-    /*     border: solid 1px aliceblue; */
-    display: flex;
+    border: solid 3px rgb(28, 28, 28);
+    border-radius: 12px;
+    box-shadow: -4px 6px black;
     color: gold;
-    flex-direction: column;
+    height: 480px;
     width: 14vw;
 
     h2 {
@@ -15,6 +16,21 @@
 
     ul {
         margin-top: 50px;
+        margin-left: -40px;
+
+        li {
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 10px 0px;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        li:hover {
+            background-color: rgb(56, 55, 55);
+
+        }
     }
 
 }

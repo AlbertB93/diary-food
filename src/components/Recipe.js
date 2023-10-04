@@ -23,9 +23,9 @@ const Recipe = (props) => {
             className="image--file"
           />
         </div>
-        <div className="first--row">
+        <div className="mealTitle">
           <h1>{props.selectedMeal.title}</h1>
-          <div className="second--row">
+          <div className="values--container">
             <p className="values">
               wartość energetyczna: {props.selectedMeal.kcal} kcal.
             </p>
@@ -38,25 +38,23 @@ const Recipe = (props) => {
         </div>
       </div>
       <button className="btn__close" onClick={() => closeRecipe()}>
-        Zamknij{" "}
+        Zamknij
       </button>
-      <div className="recipe--container__imageAndIgredients">
-        <div className="ingredients">
-          <h3>Składniki:</h3>
-          <ul>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-            <li>Składnik 1 z innego pliku</li>
-          </ul>
-        </div>
+      <div className="ingredients">
+        <h3>Składniki:</h3>
+        <ul>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+          <li>Składnik 1 z innego pliku</li>
+        </ul>
       </div>
       <div className="recipe--container__description">
-        <p>Tekst pobrany</p>
+        <h3>Przygotowanie</h3>
         <p>
           {" "}
           Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w

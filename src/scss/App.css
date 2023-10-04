@@ -28,4 +28,5 @@ h1 {
   margin-top: 10px;
   text-align: center;
   width: 60%;
+  text-shadow: 0 0 3px black, 0 0 6px gold;
 }
