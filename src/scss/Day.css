@@ -1,4 +1,5 @@
 #day {
+  background: linear-gradient(#8785a0, #00010b, #8785a0);
   border: solid 3px #1c1c1c;
   border-radius: 12px;
   box-shadow: 4px 6px black;
@@ -43,7 +44,36 @@
 }
 
 #day .meal--title {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   font-size: 1.2rem;
+  justify-content: space-evenly;
+  min-height: 50px;
+}
+
+#day .meal--title__image--day {
+  border: solid 1px white;
+  border-radius: 90px;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-top: 0px;
+  width: 50px;
+  overflow: hidden;
+}
+
+#day .meal--title__image--day .image--file {
+  border: none;
+  height: 90%;
+  width: auto;
+}
+
+#day .meal--values {
+  font-size: 0.9rem;
+  margin-top: 8px;
   text-align: center;
 }
 

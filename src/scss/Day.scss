@@ -1,4 +1,5 @@
 #day {
+    background: linear-gradient(rgb(135, 133, 160), #00010b, rgb(135, 133, 160));
     border: solid 3px rgb(28, 28, 28);
     border-radius: 12px;
     box-shadow: 4px 6px black;
@@ -8,6 +9,7 @@
     margin-top: 20px;
     padding-left: 10px;
     width: 20vw;
+
 
     .single--dish__image {
         /*         border: solid 1px red; */
@@ -30,6 +32,8 @@
         }
     }
 
+
+
     h3 {
         border-bottom: solid 1px antiquewhite;
         color: gold;
@@ -41,7 +45,36 @@
         margin: 10px;
 
         &--title {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
             font-size: 1.2rem;
+            justify-content: space-evenly;
+            min-height: 50px;
+
+            &__image--day {
+                border: solid 1px white;
+                border-radius: 90px;
+                align-items: center;
+                align-self: center;
+                display: flex;
+                height: 50px;
+                justify-content: center;
+                margin-top: 0px;
+                width: 50px;
+                overflow: hidden;
+
+                .image--file {
+                    border: none;
+                    height: 90%;
+                    width: auto;
+                }
+            }
+        }
+
+        &--values {
+            font-size: 0.9rem;
+            margin-top: 8px;
             text-align: center;
         }
     }

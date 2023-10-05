@@ -1,4 +1,5 @@
 #menu {
+  background: linear-gradient(#8785a0, #00010b, #8785a0);
   border: solid 3px #1c1c1c;
   border-radius: 12px;
   box-shadow: -4px 6px black;
@@ -30,5 +31,6 @@
 }
 
 #menu ul li:hover {
-  background-color: #383737;
+  color: black;
+  background-color: gold;
 }

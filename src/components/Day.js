@@ -23,10 +23,22 @@ const Day = (props) => {
       })} */}
 
       <div className="meal">
-        <div className="meal--title"> {props.selectedMeal.title}</div>
-        kcal: {props.selectedMeal.kcal}, tłuszcze:{props.selectedMeal.fats},
-        węgle: {props.selectedMeal.carbons}, białko:{" "}
-        {props.selectedMeal.proteins};
+        <div className="meal--title"> 
+          <div className="meal--title__image--day">
+            <img
+              src={require("../images/dish1.PNG")}
+              alt="dish1"
+              className="image--file"
+            />
+          </div>
+          {props.selectedMeal.title}
+        </div>
+
+        <div className="meal--values">
+          kcal: {props.selectedMeal.kcal}, tłuszcze:{props.selectedMeal.fats},
+          węgle: {props.selectedMeal.carbons}, białko:{" "}
+          {props.selectedMeal.proteins};
+        </div>
       </div>
 
       <div id="test"> test w Dayjs</div>
