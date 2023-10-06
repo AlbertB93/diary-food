@@ -1,5 +1,5 @@
 #recipe--container {
-  background-color: #454545;
+  background: linear-gradient(black, #8785a0, black);
   border-radius: 12px;
   border: solid 2px whitesmoke;
   color: yellow;

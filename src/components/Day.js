@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import "../scss/Day.css";
-/* import { mealsDay } from "../data/mealsDay"; */
+import { dishes } from "../data/dishes.js";
 
 const Day = (props) => {
   return (
@@ -13,20 +12,11 @@ const Day = (props) => {
         />
       </div>
       <h3>Aktualny jadłospis: </h3>
-      {/*       {meals.map((meal, index) => {
-        return (
-          <div className="meal" key={index}>
-            {index + 1}. {meal.title}: kcal: {meal.kcal}, tłuszcze: {meal.fats},
-            węgle: {meal.carbons}, białko: {meal.proteins},
-          </div>
-        );
-      })} */}
-
       <div className="meal">
-        <div className="meal--title"> 
+        <div className="meal--title">
           <div className="meal--title__image--day">
             <img
-              src={require("../images/dish1.PNG")}
+              src={dishes[2].imageState}
               alt="dish1"
               className="image--file"
             />

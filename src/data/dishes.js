@@ -1,7 +1,12 @@
+import dish1 from "../images/dish1.PNG";
+import dish2 from "../images/dish2.PNG";
+import dish3 from "../images/dish3.PNG";
+
 export const dishes = [
   {
     id: 1,
     title: "Szakszuka",
+    imageState: dish1,
     kcal: 430,
     fats: 20,
     carbons: 45,
@@ -10,6 +15,7 @@ export const dishes = [
   {
     id: 2,
     title: "Spaghetti",
+    imageState: dish2,
     kcal: 620,
     fats: 32,
     carbons: 60,
@@ -18,10 +24,10 @@ export const dishes = [
   {
     id: 3,
     title: "Tortilla z kurczakiem",
+    imageState: dish3,
     kcal: 320,
     fats: 10,
     carbons: 36,
     proteins: 20,
   },
-  
 ];

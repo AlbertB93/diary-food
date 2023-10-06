@@ -3,12 +3,14 @@ import "../scss/Content.css";
 import { dishes } from "../data/dishes.js";
 import Day from "./Day";
 import Recipe from "./Recipe";
+import Form from "./Form";
 
 class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "Szakszuka - ręcznie",
+      imageState: " ",
       kcal: 0,
       fats: 0,
       carbons: 0,
@@ -17,31 +19,12 @@ class Content extends React.Component {
   }
 
   addMeal = (index) => {
-    /*
-    this.setState((state) =>{ 
-       {state: dishes[index].title }
-    ); */
-
-    /*     this.setState((state) => {
-      {
-        state.title = dishes[index].title;
-      }
-    }); */
-
     this.setState((state) => (state.title = dishes[index].title));
-
     console.log("Aktualny tytuł: " + this.state.title);
-
     this.setState({ kcal: dishes[index].kcal });
     this.setState({ fats: dishes[index].fats });
     this.setState({ carbons: dishes[index].carbons });
     this.setState({ proteins: dishes[index].proteins });
-    /* 
-    const node = document.createElement("li");
-    const textnode = document.createTextNode("Water");
-    node.appendChild(textnode);
-    document.getElementById("myList").appendChild(node);
- */
   };
 
   addToDayMenu = (index) => {
@@ -77,12 +60,13 @@ class Content extends React.Component {
     return (
       <div id="content--container">
         <div id="dishes">
+          <Form />
           {dishes?.map((dish, index) => {
             return (
               <div className="single--dish" key={index}>
                 <div className="single--dish__image">
                   <img
-                    src={require("../images/dish1.PNG")}
+                    src={dish.imageState}
                     alt="dish1"
                     className="image--file"
                   />
@@ -115,7 +99,9 @@ class Content extends React.Component {
           })}
           <Recipe selectedMeal={this.state} />
         </div>
-        <Day selectedMeal={this.state} />
+        <div id="day--container">
+          <Day selectedMeal={this.state} />
+        </div>
       </div>
     );
   }

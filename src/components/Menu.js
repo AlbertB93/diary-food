@@ -4,11 +4,14 @@ import "../scss/Menu.css";
 const Menu = (props) => {
   return (
     <div id="menu">
-
       <h2>Menu</h2>
       <ul>
-        <li>Śniadania</li>
-        <li>Obiady</li>
+        <li>
+          <button>Śniadania</button>
+        </li>
+        <li>
+          <button>Obiady</button>
+        </li>
         <li>Kolacje</li>
         <li>Przekąski</li>
         <li>Domowe fastfoody</li>
