@@ -7,7 +7,10 @@ const Menu = (props) => {
       <h2>Menu</h2>
       <ul>
         <li>
-          <button>Śniadania</button>
+          <button>Strona główna</button>
+        </li>
+        <li>
+          <button onClick={props.showBreakfasts}>Śniadania</button>
         </li>
         <li>
           <button>Obiady</button>

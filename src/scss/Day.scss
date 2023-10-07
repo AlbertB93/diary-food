@@ -73,7 +73,9 @@
         }
 
         &--values {
+            display: flex;
             font-size: 0.9rem;
+            justify-content: space-evenly;
             margin-top: 8px;
             text-align: center;
         }

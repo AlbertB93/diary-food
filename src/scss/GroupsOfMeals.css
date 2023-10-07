@@ -1,0 +1,92 @@
+#breakfasts--container {
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 72%;
+}
+
+#breakfasts--container .title--group {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#breakfasts--container #dishes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 200px;
+  width: 100%;
+}
+
+#breakfasts--container #dishes .single--dish {
+  background-color: #444444;
+  background: linear-gradient(#080808, #8785a0, #00010b);
+  border: solid 3px white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  margin: 10px;
+  padding: 10px;
+  width: 26%;
+}
+
+#breakfasts--container #dishes .single--dish__image {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  width: 150px;
+}
+
+#breakfasts--container #dishes .single--dish__image .image--file {
+  border: solid 3px black;
+  height: 90%;
+  width: auto;
+}
+
+#breakfasts--container #dishes .single--dish h3 {
+  border: none;
+  text-align: center;
+}
+
+#breakfasts--container #dishes .single--dish__values {
+  color: whitesmoke;
+  font-size: 0.8rem;
+}
+
+#breakfasts--container #dishes .single--dish__values .list--values {
+  margin: 0;
+  padding-top: 20px;
+}
+
+#breakfasts--container #dishes .single--dish__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#breakfasts--container #dishes .single--dish__buttons .simple_btn {
+  background-color: #212121;
+  color: gold;
+  margin-top: 10px;
+  width: auto;
+}
+
+#dinners--container {
+  display: none;
+  min-width: 72%;
+}
+
+#dinners--container .title--group {
+  border: solid 1px red;
+  color: white;
+  height: 200px;
+  width: 72%;
+}

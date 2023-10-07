@@ -4,10 +4,24 @@ import Menu from "./Menu";
 import "./../scss/App.css";
 
 class Engine extends React.Component {
+
+  
+
+
+  showBreakfasts = () => {
+    let element = document.getElementById('breakfasts--container')
+    let element2 = document.getElementById('dishes')
+    console.log(element);
+    element.style.display = "flex";
+    element2.style.display = "none";
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <Menu />
+        <Menu showBreakfasts={this.showBreakfasts}/>
         <Content />
       </div>
     );

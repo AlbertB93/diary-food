@@ -2,6 +2,11 @@ import "../scss/Day.css";
 import { dishes } from "../data/dishes.js";
 
 const Day = (props) => {
+
+
+
+
+
   return (
     <div id="day">
       <div className="single--dish__image">
@@ -12,6 +17,7 @@ const Day = (props) => {
         />
       </div>
       <h3>Aktualny jadłospis: </h3>
+      <div id="meal--container">
       <div className="meal">
         <div className="meal--title">
           <div className="meal--title__image--day">
@@ -23,16 +29,14 @@ const Day = (props) => {
           </div>
           {props.selectedMeal.title}
         </div>
-
         <div className="meal--values">
-          kcal: {props.selectedMeal.kcal}, tłuszcze:{props.selectedMeal.fats},
-          węgle: {props.selectedMeal.carbons}, białko:{" "}
-          {props.selectedMeal.proteins};
+            <p id="meal--kcal">kcal: {props.selectedMeal.kcal}</p>, 
+            <p id="meal--fats">tłuszcze: {props.selectedMeal.fats}</p>, 
+            <p id="meal--carbons">węgle: {props.selectedMeal.carbons},</p>, 
+            <p id="meal--proteins">białko: {props.selectedMeal.proteins}</p>, 
         </div>
       </div>
-
-      <div id="test"> test w Dayjs</div>
-
+      </div>
       <h3>Podsumowanie: </h3>
       {
         <ul>

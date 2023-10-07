@@ -2,10 +2,13 @@ import dish1 from "../images/dish1.PNG";
 import dish2 from "../images/dish2.PNG";
 import dish3 from "../images/dish3.PNG";
 
+
+
 export const dishes = [
   {
     id: 1,
     title: "Szakszuka",
+    group: "breakfast",
     imageState: dish1,
     kcal: 430,
     fats: 20,
@@ -15,6 +18,7 @@ export const dishes = [
   {
     id: 2,
     title: "Spaghetti",
+    group: "dinner",
     imageState: dish2,
     kcal: 620,
     fats: 32,
@@ -24,6 +28,7 @@ export const dishes = [
   {
     id: 3,
     title: "Tortilla z kurczakiem",
+    group: "dinner",
     imageState: dish3,
     kcal: 320,
     fats: 10,

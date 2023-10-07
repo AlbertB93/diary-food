@@ -4,6 +4,8 @@ import { dishes } from "../data/dishes.js";
 import Day from "./Day";
 import Recipe from "./Recipe";
 import Form from "./Form";
+import Breakfasts from "./groups/Breakfasts"
+import Dinners from "./groups/Dinners";
 
 class Content extends React.Component {
   constructor(props) {
@@ -18,28 +20,60 @@ class Content extends React.Component {
     };
   }
 
-  addMeal = (index) => {
-    this.setState((state) => (state.title = dishes[index].title));
-    console.log("Aktualny tytuł: " + this.state.title);
-    this.setState({ kcal: dishes[index].kcal });
-    this.setState({ fats: dishes[index].fats });
-    this.setState({ carbons: dishes[index].carbons });
-    this.setState({ proteins: dishes[index].proteins });
-  };
-
   addToDayMenu = (index) => {
-    this.addMeal(index);
-    console.log("Aktualny tytuł: " + this.state.title.value);
+  
+/*     let testowy = document.getElementById('testowy');
+    console.log("Aktualny tytuł addTOday: " + this.state.title);
     let nowyDiv = document.createElement("div");
     nowyDiv.classList.add("meal");
     let nowyDiv2 = document.createElement("div");
     nowyDiv2.classList.add("meal--title");
-    nowyDiv2.innerHTML = this.state.title;
+    nowyDiv2.innerHTML = dishes[index].title;
+    let nowyDiv3 = document.createElement("div");
+    nowyDiv3.classList.add("meal--values");
+    nowyDiv3.innerHTML = dishes[index].kcal;
+    nowyDiv3.innerHTML = dishes[index].fats;
+    nowyDiv3.innerHTML = dishes[index].carbons;
+    nowyDiv3.innerHTML = dishes[index].proteins;
 
     nowyDiv.appendChild(nowyDiv2);
+    nowyDiv.appendChild(nowyDiv3);
+    testowy.appendChild(nowyDiv);
+ */
+    const MEAL_CONTAINER = document.getElementById('meal--container');
+    const MEAL = document.createElement ("div");
+    MEAL.classList.add("meal");
+    const MEAL_TITLE = document.createElement("div");
+    MEAL_TITLE.classList.add("meal--title")
+    const MEAL_VALUES = document.createElement("div");
+    MEAL_VALUES.classList.add("meal--values")
+    MEAL_TITLE.innerHTML = dishes[index].title;
+    const MEAL_KCAL = document.createElement("p");
+    const MEAL_FATS = document.createElement("p");
+    const MEAL_CARBONS = document.createElement("p");
+    const MEAL_PROTEINS = document.createElement("p");
+    MEAL_KCAL.classList.add("meal--kcal")
+    MEAL_FATS.classList.add("meal--fats")
+    MEAL_CARBONS.classList.add("meal--carbons")
+    MEAL_PROTEINS.classList.add("meal--proteins")
+    MEAL_KCAL.innerHTML = "kcal: " + dishes[index].kcal;
+    MEAL_FATS.innerHTML = "tłuszcze: " + dishes[index].fats;
+    MEAL_CARBONS.innerHTML = "węglowodany: " + dishes[index].carbons;
+    MEAL_PROTEINS.innerHTML = "białko: " + dishes[index].proteins;
 
-    document.getElementById("test").appendChild(nowyDiv);
+
+    MEAL_VALUES.appendChild(MEAL_KCAL)
+    MEAL_VALUES.appendChild(MEAL_FATS)
+    MEAL_VALUES.appendChild(MEAL_CARBONS)
+    MEAL_VALUES.appendChild(MEAL_PROTEINS)
+    MEAL.appendChild(MEAL_TITLE);
+    MEAL.appendChild(MEAL_VALUES);
+    MEAL_CONTAINER.appendChild(MEAL)
+
+    
   };
+
+
 
   showRecipe = (index) => {
     let recipeContainer = document.getElementById("recipe--container");
@@ -56,11 +90,13 @@ class Content extends React.Component {
     singleDish[index].style.opacity = 1;
   };
 
+
+
   render() {
     return (
       <div id="content--container">
-        <div id="dishes">
-          <Form />
+ {/*         <Form /> */}
+        <div id="dishes">         
           {dishes?.map((dish, index) => {
             return (
               <div className="single--dish" key={index}>
@@ -97,11 +133,18 @@ class Content extends React.Component {
               </div>
             );
           })}
+          {/*    <button onClick={this.showBreakfasts} > Pokaż Śniadania</button> */}
           <Recipe selectedMeal={this.state} />
+
         </div>
+        <Breakfasts />
+        <Dinners />
         <div id="day--container">
-          <Day selectedMeal={this.state} />
+          <Day 
+          selectedMeal={this.state} 
+          funkcjaTestowa = {this.addToDayMenu}/>
         </div>
+
       </div>
     );
   }
