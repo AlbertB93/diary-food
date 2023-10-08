@@ -6,7 +6,7 @@ import Recipe from "./Recipe";
 import Form from "./Form";
 import Breakfasts from "./groups/Breakfasts"
 import Dinners from "./groups/Dinners";
-import dish3 from "../images/dish3.PNG";
+
 
 class Content extends React.Component {
   constructor(props) {
@@ -43,15 +43,12 @@ class Content extends React.Component {
     MEAL_FATS.innerHTML = "tłuszcze: " + dishes[index].fats;
     MEAL_CARBONS.innerHTML = "węglowodany: " + dishes[index].carbons;
     MEAL_PROTEINS.innerHTML = "białko: " + dishes[index].proteins;
-
-
-
    
     const MEAL_IMG_DAY= document.createElement("div");
     MEAL_IMG_DAY.classList.add("meal--title__image--day");
     const MEAL_IMG = document.createElement("img");
     MEAL_IMG.classList.add("image--file");
-    MEAL_IMG.src = dish3;
+    MEAL_IMG.src = dishes[index].imageState;
     
     MEAL_IMG_DAY.appendChild(MEAL_IMG)
     MEAL_TITLE.appendChild(MEAL_IMG_DAY)
@@ -65,8 +62,18 @@ class Content extends React.Component {
     MEAL_CONTAINER.appendChild(MEAL)
 
 
+    this.addMeal(index);
+
 
     
+  };
+
+  addMeal = (index) => {
+    this.setState({ title: dishes[index].title });
+    this.setState({ kcal: dishes[index].kcal });
+    this.setState({ fats: dishes[index].fats });
+    this.setState({ carbons: dishes[index].carbons });
+    this.setState({ proteins: dishes[index].proteins });
   };
 
 
@@ -76,7 +83,7 @@ class Content extends React.Component {
     let recipeValues = document.getElementsByClassName("single--dish__values");
     let singleDish = document.getElementsByClassName("single--dish");
     let dishes = document.getElementById("dishes");
-    this.addMeal(index);
+   this.addMeal(index); 
     recipeContainer.style.display = "flex";
     for (let i = 0; i < recipeValues.length; i++) {
       recipeValues[i].style.display = "none";
@@ -138,7 +145,7 @@ class Content extends React.Component {
         <div id="day--container">
           <Day 
           selectedMeal={this.state} 
-          funkcjaTestowa = {this.addToDayMenu}/>
+        />
         </div>
 
       </div>
