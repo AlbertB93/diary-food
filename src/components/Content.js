@@ -6,6 +6,7 @@ import Recipe from "./Recipe";
 import Form from "./Form";
 import Breakfasts from "./groups/Breakfasts"
 import Dinners from "./groups/Dinners";
+import dish3 from "../images/dish3.PNG";
 
 class Content extends React.Component {
   constructor(props) {
@@ -22,24 +23,6 @@ class Content extends React.Component {
 
   addToDayMenu = (index) => {
   
-/*     let testowy = document.getElementById('testowy');
-    console.log("Aktualny tytuł addTOday: " + this.state.title);
-    let nowyDiv = document.createElement("div");
-    nowyDiv.classList.add("meal");
-    let nowyDiv2 = document.createElement("div");
-    nowyDiv2.classList.add("meal--title");
-    nowyDiv2.innerHTML = dishes[index].title;
-    let nowyDiv3 = document.createElement("div");
-    nowyDiv3.classList.add("meal--values");
-    nowyDiv3.innerHTML = dishes[index].kcal;
-    nowyDiv3.innerHTML = dishes[index].fats;
-    nowyDiv3.innerHTML = dishes[index].carbons;
-    nowyDiv3.innerHTML = dishes[index].proteins;
-
-    nowyDiv.appendChild(nowyDiv2);
-    nowyDiv.appendChild(nowyDiv3);
-    testowy.appendChild(nowyDiv);
- */
     const MEAL_CONTAINER = document.getElementById('meal--container');
     const MEAL = document.createElement ("div");
     MEAL.classList.add("meal");
@@ -62,6 +45,17 @@ class Content extends React.Component {
     MEAL_PROTEINS.innerHTML = "białko: " + dishes[index].proteins;
 
 
+
+   
+    const MEAL_IMG_DAY= document.createElement("div");
+    MEAL_IMG_DAY.classList.add("meal--title__image--day");
+    const MEAL_IMG = document.createElement("img");
+    MEAL_IMG.classList.add("image--file");
+    MEAL_IMG.src = dish3;
+    
+    MEAL_IMG_DAY.appendChild(MEAL_IMG)
+    MEAL_TITLE.appendChild(MEAL_IMG_DAY)
+
     MEAL_VALUES.appendChild(MEAL_KCAL)
     MEAL_VALUES.appendChild(MEAL_FATS)
     MEAL_VALUES.appendChild(MEAL_CARBONS)
@@ -69,6 +63,8 @@ class Content extends React.Component {
     MEAL.appendChild(MEAL_TITLE);
     MEAL.appendChild(MEAL_VALUES);
     MEAL_CONTAINER.appendChild(MEAL)
+
+
 
     
   };
