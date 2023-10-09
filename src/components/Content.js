@@ -74,6 +74,7 @@ class Content extends React.Component {
     this.setState({ fats: dishes[index].fats });
     this.setState({ carbons: dishes[index].carbons });
     this.setState({ proteins: dishes[index].proteins });
+
   };
 
 
@@ -98,8 +99,11 @@ class Content extends React.Component {
   render() {
     return (
       <div id="content--container">
- {/*         <Form /> */}
-        <div id="dishes">         
+          <Form /> 
+        <div id="dishes">      
+
+          <button className="arrow--btn__left"> </button>
+
           {dishes?.map((dish, index) => {
             return (
               <div className="single--dish" key={index}>
@@ -136,9 +140,10 @@ class Content extends React.Component {
               </div>
             );
           })}
-          {/*    <button onClick={this.showBreakfasts} > Pokaż Śniadania</button> */}
-          <Recipe selectedMeal={this.state} />
+    
+          <button className="arrow--btn__right"> </button>
 
+          <Recipe selectedMeal={this.state} />
         </div>
         <Breakfasts />
         <Dinners />

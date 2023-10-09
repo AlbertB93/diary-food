@@ -2,6 +2,17 @@ import "../scss/Day.css";
 import { dishes } from "../data/dishes.js";
 
 const Day = (props) => {
+
+  let kcalDay = 0;
+  let kcalDay2 = 0;
+
+  function testowa(){
+    kcalDay = props.selectedMeal.kcal
+    kcalDay2 += kcalDay;
+    return kcalDay2;
+  }
+
+
   return (
     <div id="day">
       <div className="single--dish__image">
@@ -35,7 +46,7 @@ const Day = (props) => {
       <h3>Podsumowanie: </h3>
       {
         <ul>
-          <li>Wartość energetyczna: 0 kcal. </li>
+          <li >Wartość energetyczna: {testowa()} kcal. </li>
           <li>Tłuszcze: 0 kcal. </li>
           <li>Węglowodany: 0kcal. </li>
           <li>Białka: 0 kcal. </li>

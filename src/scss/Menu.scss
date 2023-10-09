@@ -1,11 +1,13 @@
 #menu {
     background: linear-gradient(black, rgb(90, 89, 96), black);
+/*     border: solid 3px rgb(28, 28, 28); */
     border: solid 3px rgb(28, 28, 28);
     border-radius: 12px;
     box-shadow: -4px 6px black;
     color: gold;
     margin: 8px;
-    min-height: AUTO;
+    height: 450px;
+    min-height: auto;
     width: 14vw;
 
     h2 {
@@ -42,7 +44,7 @@
     }
 
     .menu--btn:hover {
-        border-bottom: solid 4px rgb(232, 231, 231);
+        border-bottom: solid 2px rgb(232, 231, 231);
         /*     color: black; */
         /*         background-color: rgb(235, 204, 24); */
         cursor: pointer;

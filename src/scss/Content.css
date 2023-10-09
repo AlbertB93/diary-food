@@ -7,10 +7,13 @@
 }
 
 #content--container #dishes {
+  align-items: center;
+  border: solid 2px red;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 200px;
+  margin: 10px;
+  min-height: 200px;
   width: 72%;
 }
 
@@ -25,7 +28,7 @@
   min-height: 100px;
   margin: 10px;
   padding: 10px;
-  width: 26%;
+  width: 22%;
 }
 
 #content--container #dishes .single--dish__image {
@@ -70,6 +73,26 @@
   color: gold;
   margin-top: 10px;
   width: auto;
+}
+
+#content--container #dishes .arrow--btn__left {
+  background: transparent;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid gold;
+}
+
+#content--container #dishes .arrow--btn__right {
+  background: transparent;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid gold;
 }
 
 #day {

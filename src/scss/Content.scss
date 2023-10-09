@@ -6,10 +6,13 @@
     width: 82vw;
 
     #dishes {
+        align-items: center;
+        border: solid 2px red;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        height: 200px;
+        margin: 10px;
+        min-height: 200px;
         width: 72%;
 
         .single--dish {
@@ -23,7 +26,7 @@
             min-height: 100px;
             margin: 10px;
             padding: 10px;
-            width: 26%;
+            width: 22%;
 
             &__image {
                 align-items: center;
@@ -71,6 +74,28 @@
 
             }
         }
+
+        .arrow--btn__left {
+            background: transparent;
+            width: 0;
+            height: 0;
+            margin: 0 auto;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid gold;
+        }
+
+        .arrow--btn__right {
+            background: transparent;
+            width: 0;
+            height: 0;
+            margin: 0 auto;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid gold;
+        }
+
+
 
     }
 
