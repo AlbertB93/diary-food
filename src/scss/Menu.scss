@@ -1,22 +1,23 @@
 #menu {
-    background: linear-gradient(black, rgb(135, 133, 160), black);
+    background: linear-gradient(black, rgb(90, 89, 96), black);
     border: solid 3px rgb(28, 28, 28);
     border-radius: 12px;
     box-shadow: -4px 6px black;
     color: gold;
-    height: 480px;
+    margin: 8px;
+    min-height: AUTO;
     width: 14vw;
 
     h2 {
         border-bottom: solid 1px whitesmoke;
         color: gold;
-        margin-top: 50px;
+        margin-top: 20px;
         padding-bottom: 10px;
         text-align: center;
     }
 
     ul {
-        margin-top: 50px;
+        margin-top: 20px;
         margin-left: -40px;
 
         li {
@@ -28,11 +29,25 @@
             text-align: center;
         }
 
-        li:hover {
-            color: black;
-            background-color: gold;
-
-        }
     }
+
+    .menu--btn {
+        background: transparent;
+        color: gold;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 6px;
+        width: 90%;
+    }
+
+    .menu--btn:hover {
+        border-bottom: solid 4px rgb(232, 231, 231);
+        /*     color: black; */
+        /*         background-color: rgb(235, 204, 24); */
+        cursor: pointer;
+
+    }
+
 
 }

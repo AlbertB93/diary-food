@@ -1,11 +1,13 @@
-#breakfasts--container {
+#breakfasts--container,
+#dinners--container {
   display: none;
   flex-direction: column;
   flex-wrap: nowrap;
-  min-width: 72%;
+  width: 72%;
 }
 
-#breakfasts--container .title--group {
+#breakfasts--container .title--group,
+#dinners--container .title--group {
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
@@ -14,7 +16,8 @@
   width: 100%;
 }
 
-#breakfasts--container #dishes {
+#breakfasts--container #dishes,
+#dinners--container #dishes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -22,7 +25,8 @@
   width: 100%;
 }
 
-#breakfasts--container #dishes .single--dish {
+#breakfasts--container #dishes .single--dish,
+#dinners--container #dishes .single--dish {
   background-color: #444444;
   background: linear-gradient(#080808, #8785a0, #00010b);
   border: solid 3px white;
@@ -35,7 +39,8 @@
   width: 26%;
 }
 
-#breakfasts--container #dishes .single--dish__image {
+#breakfasts--container #dishes .single--dish__image,
+#dinners--container #dishes .single--dish__image {
   align-items: center;
   align-self: center;
   display: flex;
@@ -44,49 +49,43 @@
   width: 150px;
 }
 
-#breakfasts--container #dishes .single--dish__image .image--file {
+#breakfasts--container #dishes .single--dish__image .image--file,
+#dinners--container #dishes .single--dish__image .image--file {
   border: solid 3px black;
   height: 90%;
   width: auto;
 }
 
-#breakfasts--container #dishes .single--dish h3 {
+#breakfasts--container #dishes .single--dish h3,
+#dinners--container #dishes .single--dish h3 {
   border: none;
   text-align: center;
 }
 
-#breakfasts--container #dishes .single--dish__values {
+#breakfasts--container #dishes .single--dish__values,
+#dinners--container #dishes .single--dish__values {
   color: whitesmoke;
   font-size: 0.8rem;
 }
 
-#breakfasts--container #dishes .single--dish__values .list--values {
+#breakfasts--container #dishes .single--dish__values .list--values,
+#dinners--container #dishes .single--dish__values .list--values {
   margin: 0;
   padding-top: 20px;
 }
 
-#breakfasts--container #dishes .single--dish__buttons {
+#breakfasts--container #dishes .single--dish__buttons,
+#dinners--container #dishes .single--dish__buttons {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
 }
 
-#breakfasts--container #dishes .single--dish__buttons .simple_btn {
+#breakfasts--container #dishes .single--dish__buttons .simple_btn,
+#dinners--container #dishes .single--dish__buttons .simple_btn {
   background-color: #212121;
   color: gold;
   margin-top: 10px;
   width: auto;
-}
-
-#dinners--container {
-  display: none;
-  min-width: 72%;
-}
-
-#dinners--container .title--group {
-  border: solid 1px red;
-  color: white;
-  height: 200px;
-  width: 72%;
 }

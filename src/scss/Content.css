@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 84vw;
+  width: 82vw;
 }
 
 #content--container #dishes {
@@ -16,7 +16,8 @@
 
 #content--container #dishes .single--dish {
   background-color: #444444;
-  background: linear-gradient(#080808, #8785a0, #00010b);
+  /*             background: linear-gradient(#080808, rgb(135, 133, 160), #00010b); */
+  background: radial-gradient(farthest-corner at 20% 20%, #b4b1b1, black);
   border: solid 3px white;
   border-radius: 12px;
   display: flex;

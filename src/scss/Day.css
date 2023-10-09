@@ -1,5 +1,7 @@
 #day {
-  background: linear-gradient(black, #8785a0, black);
+  /* background: linear-gradient(black, rgb(135, 133, 160), black); */
+  background: linear-gradient(black, #5a5960, black);
+  /*     background-color: black; */
   border: solid 3px #1c1c1c;
   border-radius: 12px;
   box-shadow: 4px 6px black;

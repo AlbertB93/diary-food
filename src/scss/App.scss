@@ -4,8 +4,9 @@
 
 body {
   background-color: rgb(0, 0, 0);
-  /*   background: linear-gradient(#9198e5, #171616, #9198e5); */
-  /*   background: linear-gradient(#080808, rgb(135, 133, 160), #00010b); */
+
+  /*   background: linear-gradient(to right top, black, rgb(135, 133, 160), black); */
+  /*   background: radial-gradient(farthest-side at 10% 10%, white, black); */
   min-height: 100vh;
 }
 

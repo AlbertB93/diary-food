@@ -1,9 +1,10 @@
-#breakfasts--container {
+#breakfasts--container,
+#dinners--container {
 
     display: none;
     flex-direction: column;
     flex-wrap: nowrap;
-    min-width: 72%;
+    width: 72%;
 
     .title--group {
         color: white;
@@ -14,6 +15,7 @@
         width: 100%;
 
     }
+
     #dishes {
         display: flex;
         flex-wrap: wrap;
@@ -80,18 +82,5 @@
             }
         }
 
-    }
-}
-
-#dinners--container {
-    display: none;
-    min-width: 72%;
-
-    .title--group {
-        border: solid 1px red;
-        color: white;
-
-        height: 200px;
-        width: 72%;
     }
 }
