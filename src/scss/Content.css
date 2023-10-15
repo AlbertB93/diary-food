@@ -83,6 +83,7 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-right: 20px solid gold;
+  border-left: none;
 }
 
 #content--container #dishes .arrow--btn__right {
@@ -93,6 +94,14 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 20px solid gold;
+}
+
+#content--container #dishes .hidden {
+  display: none;
+}
+
+#content--container #dishes .active {
+  display: flex;
 }
 
 #day {

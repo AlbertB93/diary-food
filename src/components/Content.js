@@ -95,18 +95,41 @@ class Content extends React.Component {
   };
 
 
+  prevMeal = ()  => {
+    let przepis1 = document.getElementsByClassName('single--dish')[0];
+    let przepis2 = document.getElementsByClassName('single--dish')[1];
+    let przepis3 = document.getElementsByClassName('single--dish')[2];
+    przepis1.classList.add('active');
+    przepis2.classList.add('active');
+    przepis3.classList.add('active');
+  };
+
+  nextMeal = ()  => {
+    let dlugoscActivow = document.getElementsByClassName('active').length;
+/*     let przepis2 = przepis1.title; */
+    console.log("długość ? " + dlugoscActivow)
+
+    let theNew = document.getElementsByClassName('single--dish')[dlugoscActivow+1];
+    let theFirst = document.getElementsByClassName('single--dish')[dlugoscActivow-2];
+    theNew.classList.add('active');
+    theFirst.classList.remove('active');
+    
+/*     przepis1.classList.add('active');
+    przepis2.classList.add('active');
+    przepis3.classList.add('active'); */
+  };
+
 
   render() {
     return (
       <div id="content--container">
-          <Form /> 
+   {/*        <Form />  */}
+
         <div id="dishes">      
-
-          <button className="arrow--btn__left"> </button>
-
+          <button className="arrow--btn__left" onClick={() => this.prevMeal()}> </button>
           {dishes?.map((dish, index) => {
             return (
-              <div className="single--dish" key={index}>
+              <div className="single--dish hidden" key={index}>
                 <div className="single--dish__image">
                   <img
                     src={dish.imageState}
@@ -141,9 +164,10 @@ class Content extends React.Component {
             );
           })}
     
-          <button className="arrow--btn__right"> </button>
+          <button className="arrow--btn__right" onClick={() => this.nextMeal()}> </button>
 
           <Recipe selectedMeal={this.state} />
+          {() => this.prevMeal().bind(this)}
         </div>
         <Breakfasts />
         <Dinners />

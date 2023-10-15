@@ -36,7 +36,7 @@ export const dishes = [
     carbons: 36,
     proteins: 20,
   },
-/*   {
+   {
     id: 4,
     title: "Schab w sosie musztardowym",
     group: "dinner",
@@ -65,5 +65,5 @@ export const dishes = [
     fats: 35,
     carbons: 50,
     proteins: 15,
-  }, */
+  }, 
 ];
